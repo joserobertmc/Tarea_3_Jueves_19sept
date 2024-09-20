@@ -1,0 +1,89 @@
+.contenedor /*padre*/
+{
+    background-color: rgb(69, 100, 100);
+    padding: 10px;
+    font-size: 15px;
+    text-align: center;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 2fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 5fr  1fr;
+
+    grid-template-areas: "header      header        header"   
+                         "nav         nav           nav"  
+                         "section1     section2     ads"
+                         "section1     section2     hijo1"
+                         "section1     section2     hijo2"
+                         "footer      footer        footer";
+    
+}
+.contenedor .header
+{
+    background-color: bisque;
+    grid-column: header;
+    font-size: 25px;
+    text-align: center;
+    color: red;
+}
+.contenedor .nav
+{
+    background-color: rgba(255, 255, 0, 0.534);
+    grid-column: nav;
+    color: grey;
+    font-size: larger;
+}
+.contenedor .section1
+{
+    background-color: rgb(174, 237, 253);
+    grid-column: section1;
+    text-align: justify;
+    padding: 10px;
+    font-family: fantasy;
+}
+.contenedor .section2
+{
+    background-color: rgb(221, 196, 86);
+    grid-column: section2;
+    text-align: justify;
+    padding: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.contenedor .ads
+{
+    background-color: rgb(112, 206, 17);
+    /*grid-column: ads;*/
+    padding: 10px;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-rows: 1fr 2fr 2fr 1fr;
+    grid-template-columns: 2fr;
+
+    grid-template-areas: "ads     ads      ads"
+                         "hijo1   hijo1    hijo1"
+                         "hijo2   hijo2    hijo2";
+}
+.contenedor .ads .hijo1
+{
+    background-color: rgb(255, 32, 2);
+    grid-column: hijo1;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.contenedor .ads .hijo2
+{
+    background-color: rgb(75, 14, 116);
+    grid-column: hijo2;
+    font-size: 19px;
+    color: wheat;
+    text-align: center;
+}
+.contenedor .footer
+{
+    background-color: rgba(72, 182, 216, 0.925);
+    grid-column: footer;
+    font-size: 20px;
+    text-align: center;
+    color: darkblue;
+}
